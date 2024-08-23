@@ -9,7 +9,6 @@ public class MenuChoice1 {
     String file = "src/elpriser.csv";
     Scanner scanner = new Scanner(System.in);
 
-    int[] priceArray = new int[24];
     public void execute() {
         System.out.println("Du valde menyval nummer ett");
         System.out.println();
@@ -51,13 +50,11 @@ public class MenuChoice1 {
                     index++;
                 }catch(NumberFormatException e){
                     System.out.println("Felaktigt prisformat på rad: " + line);
-                    continue; // Fortsätt med nästa rad
                 }
             }
             System.out.println("Priserna har laddats från filen.");
         } catch(IOException e){
             System.out.println("Ett fel inträffade vid läsning av CSV-filen." + e.getMessage());
-            e.printStackTrace();
         }
     }
 
